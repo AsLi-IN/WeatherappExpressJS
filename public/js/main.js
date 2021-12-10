@@ -41,7 +41,7 @@ const getInfo = async (event) => {
                 default:
                     temp_status.innerHTML="<i class='fas fa-cloud-rain' style='color: #f1f2f6;'></i>";
             }
-            datahide.classList.remove('data_hide')
+            datahide.classList.remove('data_hide') 
 
 
         } catch {
