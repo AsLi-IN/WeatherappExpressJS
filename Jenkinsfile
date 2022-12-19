@@ -11,7 +11,7 @@ pipeline{
   }
   post{
     success{
-    echo 'build is now completed'
+    echo 'build is now completed in DEVLOP'
     }
   }
 }
