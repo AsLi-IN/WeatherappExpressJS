@@ -15,6 +15,7 @@ pipeline{
    stage('Build')
     {
       steps{
+      sleep time: 30, unit: 'SECONDS'
       setBuildStatus("Build started", "PENDING");
       sh 'npm install'
       }
