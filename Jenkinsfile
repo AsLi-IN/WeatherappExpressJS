@@ -12,6 +12,7 @@ pipeline{
   agent any
   stages
   {
+   setBuildStatus("Build started", "PENDING");
    stage('Build')
     {
       steps{
