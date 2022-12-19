@@ -12,10 +12,10 @@ pipeline{
   agent any
   stages
   {
-   setBuildStatus("Build started", "PENDING");
    stage('Build')
     {
       steps{
+      setBuildStatus("Build started", "PENDING");
       sh 'npm install'
       }
     }
