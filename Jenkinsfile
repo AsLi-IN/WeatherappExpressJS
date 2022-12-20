@@ -16,10 +16,20 @@ pipeline{
     {
       steps{
       setBuildStatus("Build started", "PENDING");
-      sleep time: 30, unit: 'SECONDS'
+      sleep time: 03, unit: 'SECONDS'
       sh 'npm install'
       }
     }
+  }
+  stage('SonarQube Analysis')
+  {
+    
+    steps{
+      withSonarQubeEnv('sonarqube9.8'){
+       sh 'mvn sonar:sonar' 
+      }
+    }
+    
   }
   post{
     success{
