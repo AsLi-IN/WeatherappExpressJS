@@ -20,10 +20,8 @@ pipeline{
       sh 'npm install'
       }
     }
-  }
-  stage('SonarQube Analysis')
+   stage('SonarQube Analysis')
   {
-    
     steps{
       withSonarQubeEnv('sonarqube9.8'){
        sh 'mvn sonar:sonar' 
@@ -31,6 +29,8 @@ pipeline{
     }
     
   }
+  }
+
   post{
     success{
     echo 'build is now completed in DEVLOP'
